@@ -1,3 +1,5 @@
 .direnv
 build
 build_release
+out/**
+!out/.gitkeep

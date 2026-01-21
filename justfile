@@ -6,10 +6,10 @@ hermes *FLAGS:
   ./build_release/bin/hermes {{FLAGS}}
 shermes *FLAGS:
   ./build_release/bin/shermes {{FLAGS}}
-compile_js FILE:
-  just shermes -O -emit-c {{FILE}}
+compile_js FILE OUT:
+  just shermes -O -emit-c {{FILE}} -o=out/{{OUT}}
 compile_c FILE OUT:
-  gcc {{FILE}} -DNDEBUG -I./hermes/include -I./build_release/lib/config -o {{OUT}} \
+  gcc {{FILE}} -DNDEBUG -I./hermes/include -I./build_release/lib/config -o out/{{OUT}} \
   ./build_release/lib/libhermesvm_a.a \
   ./build_release/lib/VM/libhermesVMRuntime.a \
   ./build_release/jsi/libjsi.a \
