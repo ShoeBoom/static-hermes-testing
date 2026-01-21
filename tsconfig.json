@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "types": [
+      "quickjs-types"
+    ],
+    "lib": []
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
