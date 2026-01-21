@@ -5,6 +5,7 @@ function fibonacci(n: number): number {
 }
 
 function computeIntensive() {
+  'use static builtin'
   const start = Date.now();
   const result = fibonacci(40);
   const end = Date.now();
