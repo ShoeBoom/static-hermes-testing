@@ -34,6 +34,7 @@
               python315
               zip
               readline
+              just
             ];
           };
         }
