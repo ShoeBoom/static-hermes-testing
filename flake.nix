@@ -35,7 +35,7 @@
               zip
               readline
               just
-              quickjs-ng
+              quickjs
             ];
           };
         }
