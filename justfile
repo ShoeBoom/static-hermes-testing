@@ -18,3 +18,5 @@ compile_c FILE OUT:
   ./build_release/lib/ConsoleHost/libhermesConsoleHost.a \
   ./build_release/tools/shermes/libshermes_console_a.a \
   -framework CoreFoundation -lc++
+js_to_c FILE OUT:
+  just compile_js {{FILE}} {{OUT}}.c && just compile_c out/{{OUT}}.c {{OUT}}
