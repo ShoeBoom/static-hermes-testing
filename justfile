@@ -7,7 +7,7 @@ hermes *FLAGS:
 shermes *FLAGS:
   ./build_release/bin/shermes {{FLAGS}}
 compile_js FILE OUT:
-  just shermes -O -emit-c {{FILE}} -o=out/{{OUT}}
+  just shermes -O -emit-c -parse-ts -typed {{FILE}} -o=out/{{OUT}}
 compile_c FILE OUT:
   gcc {{FILE}} -DNDEBUG -I./hermes/include -I./build_release/lib/config -o out/{{OUT}} \
   ./build_release/lib/libhermesvm_a.a \
